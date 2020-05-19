@@ -1,0 +1,41 @@
+@font-face {
+	font-family: Brandon;
+	src: url('./fonts/BrandonText_Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Brandon-Med;
+  src: url('./fonts/BrandonText_Medium.otf') format('opentype');
+}
+
+body {
+  font-family: Brandon;
+}
+
+#photos {
+  margin-top: 15px;
+}
+
+#reservations {
+  position: relative;
+  top: 8px;
+  width: 0;
+  height: 0;
+}
+
+#menuAndRelated {
+  position: relative;
+  top: 1050px;
+  right: 165px;
+}
+
+#reviews {
+  position: relative;
+  top: 1030px;
+  left: 238px;
+}
+
+#footer {
+  position: relative;
+  top: 1020px;
+}
