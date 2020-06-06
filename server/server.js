@@ -40,29 +40,29 @@ app.use('/:listingId', express.static(path.resolve(__dirname, '../client/public'
 
 
 app.get('/everything/:listingId', (req, res) => {
-  let listing = Number(req.params.listingId.slice(1));
-  let photoData = axios.get(`${photos}/listing/photos/${listing}`)
+  let id = req.params.listingId;
+  let photoData = axios.get(`${photos}/listing/photos/${id}`)
     .then((result) => {
       return result.data;
     })
     .catch((err) => {
       console.log(err);
     });
-  let sideData = axios.get(`${photos}/listing/photos/sidebar/${listing}`)
+  let sideData = axios.get(`${photos}/listing/photos/sidebar/${id}`)
     .then((result) => {
       return result.data;
     })
     .catch((err) => {
       console.log(err);
     });
-  let reserveData = axios.get(`${reservations}/reservations/${listing}`)
+  let reserveData = axios.get(`${reservations}/reservations/${id}`)
     .then((result) => {
       return result.data;
     })
     .catch((err) => {
       console.log(err);
     });
-  let restaurantData = axios.get(`${menu}/restaurant/${listing}`)
+  let restaurantData = axios.get(`${menu}/restaurant/${id}`)
     .then((result) => {
       return result.data[0];
     })
